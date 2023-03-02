@@ -10,7 +10,6 @@ public class Account {
     private double checkingBalance;
 
 
-
     public Scanner getInput() {
         return input;
     }
@@ -19,12 +18,13 @@ public class Account {
         this.input = input;
     }
 
-    Scanner input=new Scanner(System.in);
-    public Account(){
+    Scanner input = new Scanner(System.in);
+
+    public Account() {
 
     }
 
-    public Account(int accountNumber, int pinNumber, double savingBalance, double checkingBalance,Scanner input) {
+    public Account(int accountNumber, int pinNumber, double savingBalance, double checkingBalance, Scanner input) {
         this.accountNumber = accountNumber;
         this.pinNumber = pinNumber;
         this.savingBalance = savingBalance;
@@ -72,9 +72,11 @@ public class Account {
                 ", checkingBalance=" + checkingBalance +
                 '}';
     }
-    //paraCekmeIslemiSonrasiKalanMiktar
-    private double calculateCheckingBalanceAfterWithdraw(double miktar){
 
-checkingBalance=checkingBalance-
+    //paraCekmeIslemiSonrasiKalanMiktar
+    private double calculateCheckingBalanceAfterWithdraw(double miktar) {
+
+        checkingBalance = checkingBalance - miktar;
+        return checkingBalance;
     }
 }
