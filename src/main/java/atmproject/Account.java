@@ -10,7 +10,7 @@ public class Account {
     private double savingBalance;
     private double checkingBalance;
 
-    DecimalFormat paraFormati=new DecimalFormat("'$',###,##0.00");
+    DecimalFormat paraFormati = new DecimalFormat("'$',###,##0.00");
 
 
     public Scanner getInput() {
@@ -104,11 +104,19 @@ public class Account {
         savingBalance = savingBalance + yatirilanMiktar;
         return savingBalance;
     }
+
     //musteri ile para cekmek icin etkilesime girelim
-    public void getCheckingWithDraw(){
-        System.out.println("Checking hesabinizda bulunan bakiye : "+paraFormati.format(checkingBalance));
+    public void getCheckingWithDraw() {
+        System.out.println("Checking hesabinizda bulunan bakiye : " + paraFormati.format(checkingBalance));
+        System.out.println("Lutfen cekmek istediginiz para miktarini giriniz");
+        double paraMiktari = input.nextDouble();
+        if (paraMiktari <= 0) {
+            System.out.println("Lutfen gecerli bir miktar giriniz");
+        }
+
     }
-    public void getSavingWithdraw(){
-        System.out.println("");
+
+    public void getSavingWithdraw() {
+        System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
     }
 }
