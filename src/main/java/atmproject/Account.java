@@ -73,5 +73,8 @@ public class Account {
                 '}';
     }
     //paraCekmeIslemiSonrasiKalanMiktar
-    private double
+    private double calculateCheckingBalanceAfterWithdraw(double miktar){
+
+checkingBalance=checkingBalance-
+    }
 }
