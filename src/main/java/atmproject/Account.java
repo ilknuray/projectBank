@@ -77,12 +77,21 @@ public class Account {
     private double calculateCheckingBalanceAfterWithdraw(double miktar) {
 
         checkingBalance = checkingBalance - miktar;
+
         return checkingBalance;
     }
     //para yatirma isleminden sonra kalan bakiyeyi hesapla
 
     private double calculeteCheckingBalanceAfterDeposit(double yatirilanMiktar) {
+
         checkingBalance = checkingBalance + yatirilanMiktar;
+
         return checkingBalance;
+    }
+    private double calculateSavingBalanceAftrWithdraw(double miktar){
+
+        savingBalance=savingBalance-miktar;
+
+        return savingBalance;
     }
 }
