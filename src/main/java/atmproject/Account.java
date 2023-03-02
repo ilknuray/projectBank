@@ -6,4 +6,53 @@ public class Account {
 
     private double savingBalance;
     private double checkingBalance;
+
+    public Account(int accountNumber, int pinNumber, double savingBalance, double checkingBalance) {
+        this.accountNumber = accountNumber;
+        this.pinNumber = pinNumber;
+        this.savingBalance = savingBalance;
+        this.checkingBalance = checkingBalance;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public int getPinNumber() {
+        return pinNumber;
+    }
+
+    public void setPinNumber(int pinNumber) {
+        this.pinNumber = pinNumber;
+    }
+
+    public double getSavingBalance() {
+        return savingBalance;
+    }
+
+    public void setSavingBalance(double savingBalance) {
+        this.savingBalance = savingBalance;
+    }
+
+    public double getCheckingBalance() {
+        return checkingBalance;
+    }
+
+    public void setCheckingBalance(double checkingBalance) {
+        this.checkingBalance = checkingBalance;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountNumber=" + accountNumber +
+                ", pinNumber=" + pinNumber +
+                ", savingBalance=" + savingBalance +
+                ", checkingBalance=" + checkingBalance +
+                '}';
+    }
 }
