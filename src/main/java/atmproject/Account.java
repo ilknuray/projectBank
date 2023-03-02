@@ -112,7 +112,9 @@ public class Account {
         double paraMiktari = input.nextDouble();
         if (paraMiktari <= 0) {
             System.out.println("Lutfen gecerli bir miktar giriniz");
-            getCheckingBalance();//methodun kendisini kendi icinde tekrar cagirarak ona yeni bir hak taniriz==>recursive method(kendini tekrar cagirma)
+            getCheckingWithDraw();//methodun kendisini kendi icinde tekrar cagirarak ona yeni bir hak taniriz==>recursive method(kendini tekrar cagirma)
+        }else if (paraMiktari<=checkingBalance){
+            calculateCheckingBalanceAfterWithdraw(paraMiktari);
         }
 
     }
