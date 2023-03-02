@@ -79,4 +79,10 @@ public class Account {
         checkingBalance = checkingBalance - miktar;
         return checkingBalance;
     }
+    //para yatirma isleminden sonra kalan bakiyeyi hesapla
+
+    private double calculeteCheckingBalanceAfterDeposit(double yatirilanMiktar) {
+        checkingBalance = checkingBalance + yatirilanMiktar;
+        return checkingBalance;
+    }
 }
