@@ -72,4 +72,6 @@ public class Account {
                 ", checkingBalance=" + checkingBalance +
                 '}';
     }
+    //paraCekmeIslemiSonrasiKalanMiktar
+    private double
 }
