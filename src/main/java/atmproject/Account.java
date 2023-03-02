@@ -88,10 +88,17 @@ public class Account {
 
         return checkingBalance;
     }
-    private double calculateSavingBalanceAftrWithdraw(double miktar){
 
-        savingBalance=savingBalance-miktar;
+    private double calculateSavingBalanceAftrWithdraw(double miktar) {
 
+        savingBalance = savingBalance - miktar;
+
+        return savingBalance;
+    }
+
+    private double calculateSavingBalanceAfterDepost(double yatirilanMiktar) {
+
+        savingBalance = savingBalance + yatirilanMiktar;
         return savingBalance;
     }
 }
