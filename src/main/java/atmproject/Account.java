@@ -1,5 +1,7 @@
 package atmproject;
 
+import java.util.Scanner;
+
 public class Account {
     private int accountNumber;
     private int pinNumber;
@@ -7,7 +9,22 @@ public class Account {
     private double savingBalance;
     private double checkingBalance;
 
-    public Account(int accountNumber, int pinNumber, double savingBalance, double checkingBalance) {
+
+
+    public Scanner getInput() {
+        return input;
+    }
+
+    public void setInput(Scanner input) {
+        this.input = input;
+    }
+
+    Scanner input=new Scanner(System.in);
+    public Account(){
+
+    }
+
+    public Account(int accountNumber, int pinNumber, double savingBalance, double checkingBalance,Scanner input) {
         this.accountNumber = accountNumber;
         this.pinNumber = pinNumber;
         this.savingBalance = savingBalance;
