@@ -1,3 +1,5 @@
+package atmproject;
+
 public class hazirlik {
     /*
     Pseudo code : (sudo kod)=>
