@@ -112,11 +112,14 @@ public class Account {
         double paraMiktari = input.nextDouble();
         if (paraMiktari <= 0) {
             System.out.println("Lutfen gecerli bir miktar giriniz");
+            getCheckingBalance();//methodun kendisini kendi icinde tekrar cagirarak ona yeni bir hak taniriz==>recursive method(kendini tekrar cagirma)
         }
 
     }
 
     public void getSavingWithdraw() {
         System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
+        System.out.println("Lutfen cekmek istediginiz mikrai giriniz");
+        double paraMiktari=input.nextDouble();
     }
 }
