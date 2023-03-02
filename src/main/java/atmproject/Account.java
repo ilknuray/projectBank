@@ -1,5 +1,6 @@
 package atmproject;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Account {
@@ -8,6 +9,8 @@ public class Account {
 
     private double savingBalance;
     private double checkingBalance;
+
+    DecimalFormat paraFormati=new DecimalFormat("'$',###,##0.00");
 
 
     public Scanner getInput() {
@@ -100,5 +103,12 @@ public class Account {
 
         savingBalance = savingBalance + yatirilanMiktar;
         return savingBalance;
+    }
+    //musteri ile para cekmek icin etkilesime girelim
+    public void getCheckingWithDraw(){
+        System.out.println("Checking hesabinizda bulunan bakiye : "+paraFormati.format(checkingBalance));
+    }
+    public void getSavingWithdraw(){
+        System.out.println("");
     }
 }
