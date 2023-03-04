@@ -113,29 +113,56 @@ public class Account {
         if (paraMiktari <= 0) {
             System.out.println("Lutfen gecerli bir miktar giriniz");
             getCheckingWithDraw();//methodun kendisini kendi icinde tekrar cagirarak ona yeni bir hak taniriz==>recursive method(kendini tekrar cagirma)
-        }else if (paraMiktari<=checkingBalance){
+        } else if (paraMiktari <= checkingBalance) {
             calculateCheckingBalanceAfterWithdraw(paraMiktari);
         }
 
     }
 
     public void getCheckingDeposit() {
-        System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
+        System.out.println("Checking hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
         System.out.println("Yatirmak istediginiz bakiyeyi giriniz");
-        double paraMiktari=input.nextDouble();
-        if (paraMiktari<=0)  {
+        double paraMiktari = input.nextDouble();
+        if (paraMiktari <= 0) {
             System.out.println("gecersiz bakiye girdiniz");
             getCheckingDeposit();
-        }else{
+        } else {
             calculeteCheckingBalanceAfterDeposit(paraMiktari);
             System.out.println();
-            System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
-
+            bakiyemiGoster(checkingBalance);
         }
 
     }
-    public void bakiyemiGoster(double balance){
-        System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(balance));
+
+    public void bakiyemiGoster(double balance) {
+        System.out.println("hesabinizda bulunan bakiye : " + paraFormati.format(balance));
 
     }
+
+    public void getSavingWithdraw() {
+        bakiyemiGoster(savingBalance);
+        System.out.println("cekmek istediginizmiktari giriniz");
+        double paraMiktari = input.nextDouble();
+        if (paraMiktari <= 0) {
+            System.out.println("gecersiz bakiye");
+            getSavingWithdraw();
+        } else if (paraMiktari <= savingBalance) {
+            calculateSavingBalanceAftrWithdraw(paraMiktari);
+        }
+    }
+
+    public void getSavingDeposit() {
+        bakiyemiGoster(savingBalance);
+        System.out.println("yatirmak istediginiz baiyeyi giriniz");
+        double paraMiktari = input.nextDouble();
+        if (paraMiktari <= 0) {
+            System.out.println("gecersiz bakiye");
+            getSavingDeposit();
+        } else {
+            calculateSavingBalanceAfterDepost(paraMiktari);
+            System.out.println();
+            bakiyemiGoster(savingBalance);
+        }
+    }
+
 }
