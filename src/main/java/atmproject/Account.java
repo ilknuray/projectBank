@@ -126,7 +126,16 @@ public class Account {
         if (paraMiktari<=0)  {
             System.out.println("gecersiz bakiye girdiniz");
             getCheckingDeposit();
-        }else
+        }else{
+            calculeteCheckingBalanceAfterDeposit(paraMiktari);
+            System.out.println();
+            System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
+
         }
+
+    }
+    public void bakiyemiGoster(double balance){
+        System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(balance));
+
     }
 }
