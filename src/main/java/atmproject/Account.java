@@ -107,7 +107,7 @@ public class Account {
 
     //musteri ile para cekmek icin etkilesime girelim
     public void getCheckingWithDraw() {
-        System.out.println("Checking hesabinizda bulunan bakiye : " + paraFormati.format(checkingBalance));
+     bakiyemiGoster(checkingBalance);
         System.out.println("Lutfen cekmek istediginiz para miktarini giriniz");
         double paraMiktari = input.nextDouble();
         if (paraMiktari <= 0) {
@@ -120,7 +120,7 @@ public class Account {
     }
 
     public void getCheckingDeposit() {
-        System.out.println("Checking hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
+        bakiyemiGoster(checkingBalance);
         System.out.println("Yatirmak istediginiz bakiyeyi giriniz");
         double paraMiktari = input.nextDouble();
         if (paraMiktari <= 0) {
