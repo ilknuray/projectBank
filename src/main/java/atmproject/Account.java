@@ -119,9 +119,14 @@ public class Account {
 
     }
 
-    public void getSavingWithdraw() {
+    public void getCheckingDeposit() {
         System.out.println("Saving hesabinizda bulunan bakiye : " + paraFormati.format(savingBalance));
-        System.out.println("Lutfen cekmek istediginiz mikrai giriniz");
+        System.out.println("Yatirmak istediginiz bakiyeyi giriniz");
         double paraMiktari=input.nextDouble();
+        if (paraMiktari<=0)  {
+            System.out.println("gecersiz bakiye girdiniz");
+            getCheckingDeposit();
+        }else
+        }
     }
 }
