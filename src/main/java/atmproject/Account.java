@@ -139,7 +139,7 @@ public class Account {
 
     }
 
-    public void getSavingWithdraw() {
+    public void getSavingWithdraw() {//savig para cekme
         bakiyemiGoster(savingBalance);
         System.out.println("cekmek istediginizmiktari giriniz");
         double paraMiktari = input.nextDouble();
@@ -151,7 +151,7 @@ public class Account {
         }
     }
 
-    public void getSavingDeposit() {
+    public void getSavingDeposit() {//saving para yatirma
         bakiyemiGoster(savingBalance);
         System.out.println("yatirmak istediginiz baiyeyi giriniz");
         double paraMiktari = input.nextDouble();
